@@ -1,0 +1,24 @@
+def task3():
+    try:
+        input0 = int(input("Put some number(>= 0)\n"))
+        Algnum = 1
+        Result = 1
+        if input0 > 0:
+            while Algnum <= input0:
+                Result *= Algnum
+                Algnum += 1
+            print("Result is ", Result)
+        elif input0 == 0:
+            print("1")
+        else:
+            print("Number is invalid")
+            print("Try again")
+            task3()
+    except ValueError:
+        print("Types are wrong")
+        print("Try again")
+        task3()
+    finally:
+        print("Made by Vladislav Shendrik")
+        print("Guaranteed quality")
+task3()
