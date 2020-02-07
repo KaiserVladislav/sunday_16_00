@@ -1,0 +1,23 @@
+def task1():
+    try:
+        input0 = int(input("Put a number more than 2\n"))
+        if input0 > 2:
+            Algnum = 1
+            while Algnum <= input0:
+                Rest = input0 % Algnum
+                if Rest == 0 and Algnum != 1:
+                    print("Minimal common divisor is ", Algnum)
+                    break
+                Algnum += 1
+        else:
+            print("Number is invalid")
+            print("Try again")
+            task1()
+    except ValueError:
+        print("Values are wrong")
+        print("Try again")
+        task1()
+    finally:
+        print("Made by Vladislav Shendrik")
+        print("Guaranteed quality")
+task1()
