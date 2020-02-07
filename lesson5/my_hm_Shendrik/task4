@@ -1,0 +1,26 @@
+def task4():
+    try:
+        input0 = int(input("Put some number\n"))
+        Algnum0 = 0
+        Algnum1 = 1
+        Algnum2 = 1
+
+        if input0 == 2 or input0 == 1:
+            print("1")
+        elif input0 < 0:
+            print("I can not solve it...")
+        else:
+            while Algnum0 < input0 - 2:
+                Result = Algnum1 + Algnum2
+                Algnum1 = Algnum2
+                Algnum2 = Result
+                print(Result)
+                Algnum0 += 1
+    except ValueError:
+        print("Types are wrong")
+        print("Try again")
+        task4()
+    finally:
+        print("Made by Vladislav Shendrik")
+        print("Guaranteed quality")
+task4()
