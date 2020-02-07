@@ -1,0 +1,20 @@
+def task2():
+    try:
+        N = int(input("Put some number (+)\n"))
+        Algnum = 0
+        if N >= 0:
+            while 2**Algnum <= N:
+                print(2**Algnum)
+                Algnum += 1
+        else:
+            print("Number is invalid")
+            print("Try again")
+            task2()
+    except ValueError:
+        print("Types are wrong")
+        print("Try again")
+        task2()
+    finally:
+        print("Made by Vladislav Shendrik")
+        print("Guaranteed quality")
+task2()
